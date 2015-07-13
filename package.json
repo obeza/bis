@@ -1,0 +1,28 @@
+{
+  "name": "bis",
+  "version": "0.0.3",
+  "description": "Manage your favorites files for download.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:obeza/bis.git"
+  },
+  "keywords": [
+    "fichier",
+    "favoris"
+  ],
+  "author": "Olivier Bezaudin <o.bezaudin@gmail.com> (https://github.com/obeza)",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "bis": "index.js"
+  },
+  "dependencies": {
+    "cli-storage": "0.0.1",
+    "download": "^4.1.4",
+    "prompt": "^0.2.14"
+  }
+}
