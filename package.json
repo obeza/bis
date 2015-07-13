@@ -1,6 +1,6 @@
 {
   "name": "bis",
-  "version": "0.0.3",
+  "version": "0.0.10",
   "description": "Manage your favorites files for download.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,11 @@
   },
   "keywords": [
     "fichier",
-    "favoris"
+    "favoris",
+    "file",
+    "download",
+    "favorite",
+    "list"
   ],
   "author": "Olivier Bezaudin <o.bezaudin@gmail.com> (https://github.com/obeza)",
   "license": "MIT",
@@ -22,7 +26,9 @@
   },
   "dependencies": {
     "cli-storage": "0.0.1",
-    "download": "^4.1.4",
-    "prompt": "^0.2.14"
+    "download": "4.1.4",
+    "download-status": "2.1.1",
+    "prompt": "0.2.14",
+    "mkdirp": "0.5.1"
   }
 }

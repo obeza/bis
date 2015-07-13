@@ -7,6 +7,7 @@ Example :
 You just want **jquery.min.js** in your folder : **libs**, Bis will bring to you **only** the file you want.
 
 ## Install
+Install Bis globally with:
 
 ```sh
 $ npm install -g bis
@@ -17,7 +18,7 @@ $ npm install -g bis
 - `bis list` list your favorite from website.
 - `bis add` add a url for a file in your favorite's list.
 - `bis rm <name>` remove a url in your favorite.
-- `bis dl <name> <directory>` download a file from your favorite. < directory > is optional.
+- `bis dl <name> <directory>` download a file from your favorite. `<directory>` is optional.
 - `bis help` list commands for Bis.
 
 ## License
