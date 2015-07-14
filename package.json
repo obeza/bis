@@ -1,6 +1,6 @@
 {
   "name": "bis",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Manage your favorites files for download.",
   "main": "index.js",
   "scripts": {
