@@ -22,7 +22,15 @@ if (userArgs[0]==="help" || !userArgs[0]){
 	console.log("add         add a url for a file in your favorite's list");
 	console.log("rm <name>   remove a url in your favorite");
 	console.log("list        list your favorite");
-	console.log("dl <name>   download a file from your favorite \n");
+	console.log("dl <name>   download a file from your favorite");
+	console.log("v           Bis's version \n");
+	process.exit();
+}
+
+if (userArgs[0]==="v" || userArgs[0]==="version"){
+	var packageData = require('./package.json');
+	console.log('\n version : ' + packageData.version + "\n");
+
 	process.exit();
 }
 
