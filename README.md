@@ -15,7 +15,7 @@ $ npm install -g bis
 
 ## Documentation
 **commands**
-- `bis list` list your favorite from website.
+- `bis list` list your favorites files from website.
 - `bis add` add a url for a file in your favorite's list.
 - `bis rm <name>` remove a url in your favorite.
 - `bis dl <name> <directory>` download a file from your favorite. `<directory>` is optional.

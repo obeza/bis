@@ -17,13 +17,13 @@ function bisFindIndex(key){
 	return dataListe.map(function(e){ return e.nom;}).indexOf(key);
 }
 
-if (userArgs[0]==="help"){
+if (userArgs[0]==="help" || !userArgs[0]){
 	console.log("\n Commands for Bis : \n");
 	console.log("add         add a url for a file in your favorite's list");
 	console.log("rm <name>   remove a url in your favorite");
 	console.log("list        list your favorite");
-	console.log("dl <name>   download a file from your favorite");
-	//process.exit();
+	console.log("dl <name>   download a file from your favorite \n");
+	process.exit();
 }
 
 if (userArgs[0]==="add"){
