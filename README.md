@@ -10,7 +10,7 @@ You just want **jquery.min.js** in your folder : **libs**, Bis will bring to you
 Install Bis globally with:
 
 ```sh
-$ npm install -g bis
+$ npm i -g bis
 ```
 
 ## Documentation
@@ -18,7 +18,7 @@ $ npm install -g bis
 - `bis list` list your favorites files from website.
 - `bis add` add a url for a file in your favorite's list.
 - `bis rm <name>` remove a url in your favorite.
-- `bis dl <name> <directory>` download a file from your favorite. `<directory>` is optional.
+- `bis dl <name> [directory]` download a file from your favorite. `<directory>` is optional.
 - `bis help` list commands for Bis.
 
 ## License

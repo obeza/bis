@@ -16,7 +16,8 @@
     "file",
     "download",
     "favorite",
-    "list"
+    "list",
+    "bookmarks"
   ],
   "author": "Olivier Bezaudin <o.bezaudin@gmail.com> (https://github.com/obeza)",
   "license": "MIT",

@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 
+var fs = require("fs");
 var Download = require('download');
 var downloadStatus = require('download-status');
 var prompt = require('prompt');
@@ -80,7 +81,8 @@ if (userArgs[0]==="rm"){
 if (userArgs[0]==="dl"){
 	if (userArgs[1]){
 		var dest = './';
-		if (userArgs[2]){
+		if (userArgs[2]!=="-s" && userArgs[2]){
+			//console.log('dossier entrée');
 			dest =  './' + userArgs[2] + "/";
 		}
 		var pos = bisFindIndex(userArgs[1]);
@@ -92,11 +94,44 @@ if (userArgs[0]==="dl"){
 	    .dest(dest)
 	    .use(downloadStatus())
 	    .run(function(){
-	    	console.log('Done !');
+
+	    	console.log('Download done ! ' + userArgs[2]);
+
+			if (userArgs[2]==="-s" || userArgs[3]==="-s"){
+				//console.log('>s detecté -> ' + fileUrl.split('/').pop() );
+
+				fs.readFile('index.html', 'utf8', function (err,data) {
+				 	
+				 	if (err) {
+				 		console.log("I can't open your index.html !");
+				 		process.exit();
+				 	}
+				    	
+				  	//console.log( "trouvé ? : " + data.search("<!--bis-->") );
+				  	if ( data.search("<!--bis-script-->") ){
+				  		console.log('I find the tag Bis in your code : ');
+				  		data = data.replace('<!--bis-script-->', '<script type="text/javascript" src="' + dest + fileUrl.split('/').pop()+'"></script>\n<!--bis-script-->')
+
+						fs.writeFile('index.html', data, function (err) {
+							if (err) throw err;
+							console.log('I add a link in your code too !');
+						});
+				  	} else {
+				  		console.log("I don't find the tag Bis in your code.");
+				  	}
+					
+				});
+
+			}
+
 	    });
+
 
 	} else {
 		console.log("\n You forget the name to download \n");
 	}
 	
+
+
+
 }
