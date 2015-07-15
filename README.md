@@ -6,11 +6,14 @@ Bis is a simplistic NodeJS command that will download file from a bookmarks that
 Example :
 - You just want **jquery.min.js** in your folder : **libs**, Bis will bring to you **only** the file you want.
 
-## New feature in >O.O.11 :
+## New feature in 0.0.12 :
+Now, your bookmark is in home/bis/data.json. Now ,you can save it !
+
+## New feature in O.O.11 :
 ```sh
 $ bis dl angular -s
 ```
-After download the file, **Bis** will add *&lt;script type="text/javascript" src="./angular.min.js">&lt;/script>* in your **index.html**. ( if you have &lt;!--bis-script--> in your index.html file. )
+After downloading the file, **Bis** will add *&lt;script type="text/javascript" src="./angular.min.js">&lt;/script>* in your **index.html**. ( if you have &lt;!--bis-script--> in your index.html file. )
 
 
 ## Install
